@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "artista": "Shakira",
+        "fecha": "2025-08-20",
+        "ciudad": "Quito",
+        "secciones": [
+            {
+                "nombre": "Loba VIP",
+                "precio": 120,
+                "stock": 50
+            },
+            {
+                "nombre": "Pies Descalzos",
+                "precio": 80,
+                "stock": 100
+            },
+            {
+                "nombre": "General Chantaje",
+                "precio": 45,
+                "stock": 200
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "artista": "Bad Bunny",
+        "fecha": "2025-09-15",
+        "ciudad": "Guayaquil",
+        "secciones": [
+            {
+                "nombre": "Yonaguni Platinum",
+                "precio": 150,
+                "stock": 40
+            },
+            {
+                "nombre": "Safaera Fan Zone",
+                "precio": 90,
+                "stock": 120
+            },
+            {
+                "nombre": "General Dakiti",
+                "precio": 60,
+                "stock": 250
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "artista": "Julio Jaramillo",
+        "fecha": "2025-11-15",
+        "ciudad": "Guayaquil",
+        "secciones": [
+            {
+                "nombre": "Baladas de Oro",
+                "precio": 50,
+                "stock": 150
+            },
+            {
+                "nombre": "Pasillos Eternos",
+                "precio": 30,
+                "stock": 200
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "artista": "Maroon 5",
+        "fecha": "2025-12-10",
+        "ciudad": "Quito",
+        "secciones": [
+            {
+                "nombre": "Sugar Zone",
+                "precio": 100,
+                "stock": 99
+            },
+            {
+                "nombre": "Moves Like Jagger",
+                "precio": 70,
+                "stock": 180
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "artista": "Juanes",
+        "fecha": "2025-08-14",
+        "ciudad": "Manta",
+        "secciones": [
+            {
+                "nombre": "A dios le pido",
+                "precio": 50,
+                "stock": 10
+            },
+            {
+                "nombre": "la paga",
+                "precio": 150,
+                "stock": 3
+            },
+            {
+                "nombre": "nada valgo",
+                "precio": 500,
+                "stock": 1
+            }
+        ]
+    }
+]
