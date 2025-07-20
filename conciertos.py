@@ -49,8 +49,12 @@ def registrar_concierto():
 
     secciones = []
     while True:
-        agregar = input("¿Agregar una nueva sección? (s/n): ").lower()
-        if agregar != 's':
+        while True:
+            agregar = input("¿Agregar una nueva sección? (s/n): ").lower()
+            if agregar in ['s', 'n']:
+                break
+            print("Respuesta no válida. Ingrese 's' o 'n'.")
+        if agregar == 'n':
             break
         
         nombre_seccion = input("Nombre de la sección: ").strip()

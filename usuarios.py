@@ -1,3 +1,4 @@
+import re
 from utils import cargar_json, guardar_json
 
 RUTA_USUARIOS = 'data/usuarios.json'
@@ -11,13 +12,13 @@ def guardar_usuarios_json(usuarios, ruta=RUTA_USUARIOS):
 def registrar_usuario():
     while True:
         nombre = input("Nombre completo: ").strip()
-        if nombre:
+        if nombre and all(c.isalpha() or c.isspace() for c in nombre):
             break
-        print("El nombre no puede estar vacío.")
+        print("El nombre no puede estar vacío y solo puede contener letras y espacios.")
 
     while True:
         correo = input("Correo electrónico: ").strip()
-        if "@" in correo and "." in correo:
+        if re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", correo):
             break
         print("Correo electrónico inválido.")
 

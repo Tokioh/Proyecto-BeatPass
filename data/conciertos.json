@@ -103,5 +103,36 @@
                 "stock": 1
             }
         ]
+    },
+    {
+        "id": 6,
+        "artista": "Bacilos",
+        "fecha": "2025-09-25",
+        "ciudad": "Quito",
+        "secciones": [
+            {
+                "nombre": "Bacilos caraluna",
+                "precio": 40,
+                "stock": 100
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "artista": "bacilos",
+        "fecha": "2025-10-12",
+        "ciudad": "Portoviejo",
+        "secciones": [
+            {
+                "nombre": "premium pass",
+                "precio": 97,
+                "stock": 75
+            },
+            {
+                "nombre": "Pasos de gigante Vip",
+                "precio": 75,
+                "stock": 10
+            }
+        ]
     }
 ]
