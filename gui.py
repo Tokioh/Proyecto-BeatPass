@@ -167,20 +167,32 @@ class BeatPassGUI:
 
     def buscar_y_mostrar_boletos(self):
         correo = self.entry_correo_ver.get()
-        boletos = mostrar_boletos_usuario(correo)
+        if not correo:
+            messagebox.showerror("Error", "Por favor, ingrese su correo electrónico.")
+            return
+        boletos_o_error = mostrar_boletos_usuario(correo)
 
-        for widget in self.root.winfo_children():
-            if isinstance(widget, (ttk.Treeview, tk.Text)):
-                widget.destroy()
-
-        if not boletos:
-            tk.Label(self.root, text="No se encontraron boletos para este usuario.", font=("Arial", 12)).pack(pady=20)
+        if isinstance(boletos_o_error, str):
+            messagebox.showerror("Error", boletos_o_error)
             return
 
-        frame_boletos_lista = tk.Frame(self.root)
-        frame_boletos_lista.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
+        boletos = boletos_o_error
 
-        tree = ttk.Treeview(frame_boletos_lista, columns=("Artista", "Fecha", "Ciudad", "Sección"), show="headings")
+        # limpiar el mensaje previo
+        if hasattr(self, 'frame_boletos_lista') and self.frame_boletos_lista.winfo_exists():
+            self.frame_boletos_lista.destroy()
+        if hasattr(self, 'no_boletos_label') and self.no_boletos_label.winfo_exists():
+            self.no_boletos_label.destroy()
+
+        if not boletos:
+            self.no_boletos_label = tk.Label(self.root, text="No se encontraron boletos para este usuario.", font=("Arial", 12))
+            self.no_boletos_label.pack(pady=20)
+            return
+
+        self.frame_boletos_lista = tk.Frame(self.root)
+        self.frame_boletos_lista.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
+
+        tree = ttk.Treeview(self.frame_boletos_lista, columns=("Artista", "Fecha", "Ciudad", "Sección"), show="headings")
         tree.heading("Artista", text="Artista")
         tree.heading("Fecha", text="Fecha")
         tree.heading("Ciudad", text="Ciudad")
