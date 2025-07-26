@@ -13,12 +13,12 @@
             {
                 "nombre": "Pies Descalzos",
                 "precio": 80,
-                "stock": 100
+                "stock": 99
             },
             {
                 "nombre": "General Chantaje",
                 "precio": 45,
-                "stock": 200
+                "stock": 199
             }
         ]
     },
@@ -59,7 +59,7 @@
             {
                 "nombre": "Pasillos Eternos",
                 "precio": 30,
-                "stock": 200
+                "stock": 197
             }
         ]
     },
@@ -77,7 +77,7 @@
             {
                 "nombre": "Moves Like Jagger",
                 "precio": 70,
-                "stock": 180
+                "stock": 179
             }
         ]
     },
@@ -119,19 +119,19 @@
     },
     {
         "id": 7,
-        "artista": "bacilos",
-        "fecha": "2025-10-12",
-        "ciudad": "Portoviejo",
+        "artista": "Mark Anthony",
+        "fecha": "2025-10-24",
+        "ciudad": "Quito",
         "secciones": [
             {
-                "nombre": "premium pass",
-                "precio": 97,
-                "stock": 75
+                "nombre": "hola box",
+                "precio": 25,
+                "stock": 10
             },
             {
-                "nombre": "Pasos de gigante Vip",
-                "precio": 75,
-                "stock": 10
+                "nombre": "dosdos",
+                "precio": 15,
+                "stock": 3
             }
         ]
     }

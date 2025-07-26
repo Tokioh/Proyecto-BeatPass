@@ -1,33 +1,35 @@
 import re
-from utils import cargar_json, guardar_json
+from utils import cargar_csv, guardar_csv
 
-RUTA_USUARIOS = 'data/usuarios.json'
+RUTA_USUARIOS = 'data/usuarios.csv'
 
-def cargar_usuarios_json(ruta=RUTA_USUARIOS):
-    return cargar_json(ruta)
+def cargar_usuarios_csv():
+    return cargar_csv(RUTA_USUARIOS)
 
-def guardar_usuarios_json(usuarios, ruta=RUTA_USUARIOS):
-    guardar_json(ruta, usuarios)
+def guardar_usuarios_csv(usuarios):
+    guardar_csv(RUTA_USUARIOS, usuarios, ['nombre', 'correo'])
 
-def registrar_usuario():
-    while True:
-        nombre = input("Nombre completo: ").strip()
-        if nombre and all(c.isalpha() or c.isspace() for c in nombre):
-            break
-        print("El nombre no puede estar vacío y solo puede contener letras y espacios.")
+def registrar_usuario(nombre, correo):
+    if not nombre or not all(c.isalpha() or c.isspace() for c in nombre):
+        return "El nombre no puede estar vacío y solo puede contener letras y espacios."
+    if not re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", correo):
+        return "Correo electrónico inválido."
 
-    while True:
-        correo = input("Correo electrónico: ").strip()
-        if re.match(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", correo):
-            break
-        print("Correo electrónico inválido.")
-
-    usuarios = cargar_usuarios_json()
+    usuarios = cargar_usuarios_csv()
     if any(u['correo'] == correo for u in usuarios):
-        print("El correo ya está registrado.")
-        return
+        return "El correo ya está registrado."
 
     usuario = {"nombre": nombre, "correo": correo}
     usuarios.append(usuario)
-    guardar_usuarios_json(usuarios)
-    print(f"¡Usuario {nombre} registrado con éxito!")
+    guardar_usuarios_csv(usuarios)
+    return None
+
+def validar_usuario_registrado(correo):
+    if not correo:
+        return "El correo no puede estar vacío."
+    
+    usuarios = cargar_usuarios_csv()
+    if not any(u['correo'] == correo for u in usuarios):
+        return "El correo electrónico no está registrado. Por favor, regístrese primero."
+    
+    return None  # Todo correcto

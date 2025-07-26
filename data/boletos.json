@@ -4,5 +4,35 @@
         "concierto_id": 4,
         "seccion": "Sugar Zone",
         "precio": 100
+    },
+    {
+        "usuario": "kevin@mail.com",
+        "concierto_id": 1,
+        "seccion": "General Chantaje",
+        "precio": 45
+    },
+    {
+        "usuario": "kevin@mail.com",
+        "concierto_id": 4,
+        "seccion": "Moves Like Jagger",
+        "precio": 70
+    },
+    {
+        "usuario": "prueba1@gmail.com",
+        "concierto_id": 1,
+        "seccion": "Pies Descalzos",
+        "precio": 80
+    },
+    {
+        "usuario": "prueba2@gmail.com",
+        "concierto_id": 3,
+        "seccion": "Pasillos Eternos",
+        "precio": 30
+    },
+    {
+        "usuario": "prueba2@gmail.com",
+        "concierto_id": 7,
+        "seccion": "dosdos",
+        "precio": 15
     }
 ]
