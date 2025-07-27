@@ -1,38 +1,170 @@
 [
     {
-        "usuario": "kevin@gmail.com",
-        "concierto_id": 4,
-        "seccion": "Sugar Zone",
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "maria@email.com",
+        "concierto_id": 1,
+        "seccion": "General",
         "precio": 100
     },
     {
-        "usuario": "kevin@mail.com",
+        "usuario": "juan@email.com",
         "concierto_id": 1,
-        "seccion": "General Chantaje",
-        "precio": 45
+        "seccion": "VIP",
+        "precio": 200
     },
     {
-        "usuario": "kevin@mail.com",
-        "concierto_id": 4,
-        "seccion": "Moves Like Jagger",
-        "precio": 70
-    },
-    {
-        "usuario": "prueba1@gmail.com",
+        "usuario": "juan@email.com",
         "concierto_id": 1,
-        "seccion": "Pies Descalzos",
-        "precio": 80
+        "seccion": "VIP",
+        "precio": 200
     },
     {
-        "usuario": "prueba2@gmail.com",
+        "usuario": "maria@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "carlos@email.com",
+        "concierto_id": 1,
+        "seccion": "General",
+        "precio": 100
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 2,
+        "seccion": "General",
+        "precio": 150
+    },
+    {
+        "usuario": "juan@email.com",
         "concierto_id": 3,
-        "seccion": "Pasillos Eternos",
-        "precio": 30
+        "seccion": "Platino",
+        "precio": 300
     },
     {
-        "usuario": "prueba2@gmail.com",
-        "concierto_id": 7,
-        "seccion": "dosdos",
-        "precio": 15
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "maria@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "kevin@mail.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "ana@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
     }
 ]
