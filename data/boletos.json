@@ -166,5 +166,77 @@
         "concierto_id": 1,
         "seccion": "VIP",
         "precio": 200
+    },
+    {
+        "usuario": "pruebaf@mail.com",
+        "concierto_id": 3,
+        "seccion": "Platino",
+        "precio": 300
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "ana@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
+    },
+    {
+        "usuario": "juan@email.com",
+        "concierto_id": 1,
+        "seccion": "VIP",
+        "precio": 200
     }
 ]

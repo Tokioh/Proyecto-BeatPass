@@ -8,7 +8,7 @@
             {
                 "nombre": "VIP",
                 "precio": 200,
-                "stock": 3
+                "stock": 2
             }
         ]
     },
@@ -34,7 +34,7 @@
             {
                 "nombre": "Platino",
                 "precio": 300,
-                "stock": 4
+                "stock": 3
             }
         ]
     },
@@ -158,6 +158,88 @@
     },
     {
         "id": 10,
+        "artista": "Ed Sheeran",
+        "fecha": "2025-10-10",
+        "ciudad": "Cuenca",
+        "secciones": [
+            {
+                "nombre": "VIP",
+                "precio": 280,
+                "stock": 8
+            },
+            {
+                "nombre": "Preferencia",
+                "precio": 180,
+                "stock": 40
+            },
+            {
+                "nombre": "General",
+                "precio": 90,
+                "stock": 150
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "artista": "mana",
+        "fecha": "2028-02-25",
+        "ciudad": "esmeraldas",
+        "secciones": [
+            {
+                "nombre": "mana1",
+                "precio": 52,
+                "stock": 4
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "artista": "Coldplay",
+        "fecha": "2025-12-15",
+        "ciudad": "Quito",
+        "secciones": [
+            {
+                "nombre": "VIP",
+                "precio": 300,
+                "stock": 10
+            },
+            {
+                "nombre": "Platea",
+                "precio": 200,
+                "stock": 50
+            },
+            {
+                "nombre": "General",
+                "precio": 100,
+                "stock": 200
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "artista": "Taylor Swift",
+        "fecha": "2025-11-20",
+        "ciudad": "Guayaquil",
+        "secciones": [
+            {
+                "nombre": "VIP",
+                "precio": 400,
+                "stock": 5
+            },
+            {
+                "nombre": "Golden Circle",
+                "precio": 250,
+                "stock": 30
+            },
+            {
+                "nombre": "General",
+                "precio": 120,
+                "stock": 300
+            }
+        ]
+    },
+    {
+        "id": 14,
         "artista": "Ed Sheeran",
         "fecha": "2025-10-10",
         "ciudad": "Cuenca",

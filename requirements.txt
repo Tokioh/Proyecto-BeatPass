@@ -1,0 +1,7 @@
+# Dependencias para testing de BeatPass
+pytest>=8.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+
+# Dependencias opcionales para desarrollo
+coverage>=7.0.0

@@ -1,6 +1,6 @@
 from utils import cargar_json, guardar_json
 from conciertos import buscar_concierto_por_id, guardar_json, RUTA_CONCIERTOS
-from usuarios import cargar_usuarios_csv, validar_usuario_registrado
+from usuarios import validar_usuario_registrado
 
 RUTA_BOLETOS = 'data/boletos.json'
 
