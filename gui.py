@@ -8,7 +8,7 @@ class BeatPassGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("🎵 BeatPass - Entradas para Conciertos")
-        self.root.geometry("1000x700")
+        self.root.geometry("850x700")
         self.root.configure(bg='#1a1a2e')
         
         # Configurar el estilo
@@ -196,6 +196,31 @@ class BeatPassGUI:
     def crear_frame_contenido(self, titulo, icono="🎵"):
         """Crea un frame estilizado para el contenido"""
         frame_principal = tk.Frame(self.root, bg=self.colores['fondo'])
+        frame_principal.pack(fill=tk.BOTH, expand=True, padx=30, pady=30)
+        
+        # Header
+        frame_header = tk.Frame(frame_principal, bg=self.colores['fondo'])
+        frame_header.pack(fill=tk.X, pady=(0, 20))
+        
+        titulo_frame = tk.Label(frame_header,
+                               text=f"{icono} {titulo}",
+                               font=('Segoe UI', 24, 'bold'),
+                               fg=self.colores['acento'],
+                               bg=self.colores['fondo'])
+        titulo_frame.pack()
+        
+        # Frame de contenido
+        frame_contenido = tk.Frame(frame_principal, 
+                                 bg=self.colores['tarjeta'],
+                                 relief=tk.FLAT,
+                                 bd=0)
+        frame_contenido.pack(fill=tk.BOTH, expand=True, pady=10)
+        
+        return frame_contenido
+
+    def crear_frame_contenido_simple(self, parent, titulo, icono="🎵"):
+        """Crea un frame estilizado simple para contenido scrollable"""
+        frame_principal = tk.Frame(parent, bg=self.colores['fondo'])
         frame_principal.pack(fill=tk.BOTH, expand=True, padx=30, pady=30)
         
         # Header
@@ -729,7 +754,30 @@ class BeatPassGUI:
     def mostrar_formulario_registro_concierto(self):
         self.limpiar_ventana()
         
-        frame_contenido = self.crear_frame_contenido("Registrar Nuevo Concierto", "🎤")
+        # Canvas principal con scrollbar para toda la pantalla
+        main_canvas = tk.Canvas(self.root, bg=self.colores['fondo'])
+        main_scrollbar = ttk.Scrollbar(self.root, orient="vertical", command=main_canvas.yview)
+        scrollable_main_frame = tk.Frame(main_canvas, bg=self.colores['fondo'])
+        
+        scrollable_main_frame.bind("<Configure>", lambda e: main_canvas.configure(scrollregion=main_canvas.bbox("all")))
+        main_canvas.create_window((0, 0), window=scrollable_main_frame, anchor="nw")
+        main_canvas.configure(yscrollcommand=main_scrollbar.set)
+        
+        main_canvas.pack(side="left", fill="both", expand=True)
+        main_scrollbar.pack(side="right", fill="y")
+
+        # después de crear main_canvas y scrollable_main_frame:
+        main_canvas.create_window((0, 0), window=scrollable_main_frame, anchor="n")
+
+        main_canvas.bind("<Configure>", lambda e: (
+            main_canvas.create_window((e.width // 2, 0),
+                              window=scrollable_main_frame,
+                              anchor="n"),
+            main_canvas.configure(scrollregion=main_canvas.bbox("all"))
+        ))
+            
+        
+        frame_contenido = self.crear_frame_contenido_simple(scrollable_main_frame, "Registrar Nuevo Concierto", "🎤")
 
         # Información del concierto
         self.entry_artista = self.crear_entrada_estilizada(frame_contenido, "🎤 Nombre del Artista:")
@@ -749,7 +797,7 @@ class BeatPassGUI:
         titulo_secciones.pack(anchor=tk.W, pady=(0, 10))
         
         # Frame scrollable para secciones
-        canvas = tk.Canvas(frame_secciones_container, bg=frame_contenido['bg'], height=200)
+        canvas = tk.Canvas(frame_secciones_container, bg=frame_contenido['bg'], height=120)
         scrollbar_secciones = ttk.Scrollbar(frame_secciones_container, orient="vertical", command=canvas.yview)
         self.frame_secciones = tk.Frame(canvas, bg=frame_contenido['bg'])
         
@@ -757,7 +805,7 @@ class BeatPassGUI:
         canvas.create_window((0, 0), window=self.frame_secciones, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar_secciones.set)
         
-        canvas.pack(side="left", fill="both", expand=True)
+        canvas.pack(side="left", fill="x")
         scrollbar_secciones.pack(side="right", fill="y")
         
         self.secciones_entries = []
@@ -1018,7 +1066,7 @@ if __name__ == "__main__":
         pass
     
     # Hacer que la ventana sea redimensionable
-    root.minsize(800, 600)
+    root.minsize(600, 600)
     
     app = BeatPassGUI(root)
     root.mainloop()
